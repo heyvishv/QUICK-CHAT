@@ -8,17 +8,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/png" href="content/QCFavicon.png">
 </head>
 <body>
     <nav class="navbar">
         <div class="container">
             <div class="nav-content">
                 <div class="logo">
-                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                        <rect width="32" height="32" rx="8" fill="#25D366"/>
-                        <path d="M16 9C12.134 9 9 12.134 9 16C9 17.176 9.324 18.278 9.886 19.228L9.142 22.142L12.142 21.414C13.064 21.916 14.102 22.2 15.2 22.272C19.066 22.272 22.2 19.138 22.2 15.272C22.2 13.424 21.476 11.716 20.208 10.448C18.94 9.18 17.232 8.456 15.384 8.456L16 9ZM16.816 20.8C15.944 20.8 15.092 20.556 14.35 20.1L14.188 20.008L11.992 20.556L12.548 18.424L12.444 18.256C11.936 17.484 11.664 16.58 11.664 15.648C11.664 13.256 13.608 11.312 16 11.312C17.152 11.312 18.24 11.76 19.056 12.576C19.872 13.392 20.32 14.48 20.32 15.632C20.32 18.024 18.376 19.968 15.984 19.968L16.816 20.8Z" fill="white"/>
-                    </svg>
-                    <span>QUICK CHAT</span>
+                    <a href="index.html"><img src="content/QC-LOGO.png" alt="" width="300"></a>
                 </div>
                 <div class="nav-links">
                     <a href="#features">Features</a>
@@ -47,7 +44,7 @@
                         <span>Trusted by 1000+ Businesses</span>
                     </div>
                     <h1 class="hero-title">
-                        Turn WhatsApp Chats into
+                       Turn WhatsApp Chats into
                         <span class="gradient-text">Sales — Automatically</span>
                     </h1>
                     <p class="hero-subtitle">
@@ -82,7 +79,7 @@
                         <div class="chat-header">
                             <div class="chat-avatar"></div>
                             <div class="chat-info">
-                                <div class="chat-name">Quick Chat</div>
+                                <div class="chat-name">QuickChats</div>
                                 <div class="chat-status">
                                     <span class="status-dot"></span>
                                     Online
@@ -415,66 +412,92 @@
             </div>
         </div>
     </section>
+    <!--see it in action -->
 
-    <section class="product-demo">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">See It in <span class="gradient-text">Action</span></h2>
-                <p class="section-subtitle">Real-time dashboard and automation interface</p>
+    <section class="qc-dashboard-container">
+  <div class="container">
+    <div class="section-header">
+        <h2 class="section-title">Real-Time <span class="gradient-text">Analytics Dashboard</span></h2>
+        <p class="section-subtitle">Monitor your automation performance with live data visualization</p>
+    </div>
+
+    <div class="qc-dashboard-main">
+      <nav class="qc-dash-nav">
+        <a href="javascript:void(0)" class="qc-nav-tab active">Dashboard</a>
+        <a href="javascript:void(0)" class="qc-nav-tab">Conversations</a>
+        <a href="javascript:void(0)" class="qc-nav-tab">Analytics</a>
+        <a href="javascript:void(0)" class="qc-nav-tab">Settings</a>
+      </nav>
+
+      <div class="qc-dash-body">
+        <div class="qc-stat-grid">
+          <div class="qc-stat-card qc-slide-left">
+            <span class="qc-stat-label">Active Conversations</span>
+            <div class="qc-stat-value-wrap">
+              <span class="qc-stat-number qc-num-1"></span>
             </div>
-            <div class="demo-container">
-                <div class="dashboard-mockup">
-                    <div class="dashboard-header">
-                        <div class="dashboard-tabs">
-                            <div class="tab active">Dashboard</div>
-                            <div class="tab">Conversations</div>
-                            <div class="tab">Analytics</div>
-                            <div class="tab">Settings</div>
-                        </div>
-                    </div>
-                    <div class="dashboard-content">
-                        <div class="dashboard-stats">
-                            <div class="stat-card">
-                                <div class="stat-card-label">Active Conversations</div>
-                                <div class="stat-card-value">142</div>
-                                <div class="stat-card-change positive">+12%</div>
-                            </div>
-                            <div class="stat-card">
-                                <div class="stat-card-label">Conversion Rate</div>
-                                <div class="stat-card-value">68%</div>
-                                <div class="stat-card-change positive">+8%</div>
-                            </div>
-                            <div class="stat-card">
-                                <div class="stat-card-label">Messages Sent</div>
-                                <div class="stat-card-value">1.2k</div>
-                                <div class="stat-card-change positive">+24%</div>
-                            </div>
-                        </div>
-                        <div class="dashboard-chart">
-                            <div class="chart-header">
-                                <div class="chart-title">Conversation Trends</div>
-                                <div class="chart-period">Last 7 days</div>
-                            </div>
-                            <div class="chart-bars">
-                                <div class="bar" style="height: 45%"></div>
-                                <div class="bar" style="height: 60%"></div>
-                                <div class="bar" style="height: 55%"></div>
-                                <div class="bar" style="height: 75%"></div>
-                                <div class="bar" style="height: 85%"></div>
-                                <div class="bar" style="height: 70%"></div>
-                                <div class="bar active" style="height: 95%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <span class="qc-stat-delta positive">+12%</span>
+            <div class="qc-card-glow"></div>
+          </div>
+
+          <div class="qc-stat-card qc-slide-up">
+            <span class="qc-stat-label">Conversion Rate</span>
+            <div class="qc-stat-value-wrap">
+              <span class="qc-stat-number qc-num-2"></span>
             </div>
+            <span class="qc-stat-delta positive">+8%</span>
+            <div class="qc-card-glow"></div>
+          </div>
+
+          <div class="qc-stat-card qc-slide-right">
+            <span class="qc-stat-label">Messages Sent</span>
+            <div class="qc-stat-value-wrap">
+              <span class="qc-stat-number qc-num-3"></span>
+            </div>
+            <span class="qc-stat-delta positive">+24%</span>
+            <div class="qc-card-glow"></div>
+          </div>
         </div>
-    </section>
+
+        <div class="qc-chart-card qc-slide-up-delay">
+          <div class="qc-chart-header">
+            <h2 class="qc-chart-title">Conversation Trends</h2>
+            <span class="qc-chart-range">Last 7 days</span>
+          </div>
+
+          <div class="qc-chart-area">
+            <div class="qc-bars-wrap">
+              <div class="qc-bar-col"><div class="qc-bar qc-bar-1"></div><span class="qc-bar-label">Mon</span></div>
+              <div class="qc-bar-col"><div class="qc-bar qc-bar-2"></div><span class="qc-bar-label">Tue</span></div>
+              <div class="qc-bar-col"><div class="qc-bar qc-bar-3"></div><span class="qc-bar-label">Wed</span></div>
+              <div class="qc-bar-col"><div class="qc-bar qc-bar-4"></div><span class="qc-bar-label">Thu</span></div>
+              <div class="qc-bar-col"><div class="qc-bar qc-bar-5"></div><span class="qc-bar-label">Fri</span></div>
+              <div class="qc-bar-col"><div class="qc-bar qc-bar-6"></div><span class="qc-bar-label">Sat</span></div>
+              <div class="qc-bar-col"><div class="qc-bar qc-bar-7"></div><span class="qc-bar-label">Sun</span></div>
+            </div>
+            <div class="qc-grid-lines">
+              <div class="qc-grid-line"></div>
+              <div class="qc-grid-line"></div>
+              <div class="qc-grid-line"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+    
+
 
     <section class="benefits">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Why Choose <span class="gradient-text">Quick Chat</span></h2>
+                <h2 class="section-title">Why Choose <span class="gradient-text">QuickChats</span></h2>
                 <p class="section-subtitle">Measurable results that transform your business</p>
             </div>
             <div class="benefits-grid">
@@ -510,35 +533,35 @@
             </div>
             <div class="testimonials-grid">
                 <div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Quick Chat transformed our lead generation. We're now converting 3x more leads with half the effort. The automation is seamless!"</p>
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐<sub>5.0</sub></div>
+                    <p class="testimonial-text">"QuickChats increased our sales by 300%. The AI chatbot handles everything while we sleep."</p>
                     <div class="testimonial-author">
-                        <div class="author-avatar">SM</div>
+                        <div class="author-avatar">RS</div>
                         <div class="author-info">
-                            <div class="author-name">Sarah Mitchell</div>
-                            <div class="author-role">Marketing Director, TechStart</div>
+                            <div class="author-name">Rahul Sharma</div>
+                            <div class="author-role">E-commerce Owner, FashionHub</div>
                         </div>
                     </div>
                 </div>
                 <div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"The best investment we made this year. Our response time dropped from hours to seconds, and customers love the instant support."</p>
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐<sub>5.0</sub></div>
+                    <p class="testimonial-text">"Best decision ever. We now manage 50+ clients with automated WhatsApp campaigns."</p>
                     <div class="testimonial-author">
-                        <div class="author-avatar">JC</div>
+                        <div class="author-avatar">PP</div>
                         <div class="author-info">
-                            <div class="author-name">James Chen</div>
-                            <div class="author-role">CEO, Digital Agency Pro</div>
+                            <div class="author-name">Priya Patel</div>
+                            <div class="author-role">Marketing Head, GrowthAgency</div>
                         </div>
                     </div>
                 </div>
                 <div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"Setup took less than 10 minutes. The visual builder is incredibly intuitive, and the ROI was positive within the first month."</p>
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐<sub>5.0</sub></div>
+                    <p class="testimonial-text">"I get qualified leads directly on WhatsApp. The automation saves me 20 hours per week."</p>
                     <div class="testimonial-author">
-                        <div class="author-avatar">ER</div>
+                        <div class="author-avatar">AK</div>
                         <div class="author-info">
-                            <div class="author-name">Emily Rodriguez</div>
-                            <div class="author-role">Founder, eCommerce Plus</div>
+                            <div class="author-name">Amit Kumar</div>
+                            <div class="author-role">Coach, FitLife Coaching</div>
                         </div>
                     </div>
                 </div>
@@ -555,84 +578,180 @@
             <div class="pricing-grid">
                 <div class="pricing-card">
                     <div class="pricing-header">
-                        <h3 class="pricing-plan">Starter</h3>
-                        <p class="pricing-description">Perfect for small businesses</p>
+                        <h3 class="pricing-plan"> FREE </h3>
+                        <p class="pricing-description"> <pre>Perfect for small businesses (12 different Features)</pre></p>
                     </div>
                     <div class="pricing-price">
                         <span class="price-currency">₹</span>
-                        <span class="price-amount">29</span>
-                        <span class="price-period">/month</span>
+                        <span class="price-amount">0.00</span>
+                        <span class="price-period">/Yearly</span>
                     </div>
                     <ul class="pricing-features">
                         <li class="feature-item">
                             <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <path d="M7 10L9 12L13 8" stroke="#25D366" stroke-width="2" stroke-linecap="round"/>
                             </svg>
-                            Up to 500 contacts
+                            <span>50</span> - CONTACTS 
                         </li>
                         <li class="feature-item">
                             <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <path d="M7 10L9 12L13 8" stroke="#25D366" stroke-width="2" stroke-linecap="round"/>
                             </svg>
-                            1,000 messages/month
+                             <span>2</span> - Template Bots
                         </li>
                         <li class="feature-item">
                             <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <path d="M7 10L9 12L13 8" stroke="#25D366" stroke-width="2" stroke-linecap="round"/>
                             </svg>
-                            Basic automation
+                             <span>5</span>- Message Bots
                         </li>
                         <li class="feature-item">
                             <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <path d="M7 10L9 12L13 8" stroke="#25D366" stroke-width="2" stroke-linecap="round"/>
                             </svg>
-                            Email support
+                             <span>2</span> - Campaigns
+                        </li>
+                        <li class="feature-item">
+                            <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M7 10L9 12L13 8" stroke="#25D366" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                             <span>5</span>- AI Prompts
+                        </li>
+                        <li class="feature-item">
+                            <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M7 10L9 12L13 8" stroke="#25D366" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                            <span>5</span> - Canned Replies
+                        </li>
+                        <li class="feature-item">
+                            <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M7 10L9 12L13 8" stroke="#25D366" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                             <span>50</span>- Conversations
+                        </li>
+                        <li class="feature-item">
+                            <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M7 10L9 12L13 8" stroke="#25D366" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                             <span>1</span>- Bot Flow
+                        </li>
+                        <li class="feature-item">
+                            <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M7 10L9 12L13 8" stroke="#25D366" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                            <span>Unlimited</span>-  Rest API
+                        </li>
+                        <li class="feature-item">
+                            <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M7 10L9 12L13 8" stroke="#25D366" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                            <span>1</span>- Embedded Signup
+                        </li>
+                        <li class="feature-item">
+                            <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M7 10L9 12L13 8" stroke="#25D366" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                            <span>5</span>- Ecommerce Webhooks
+                        </li>
+                        <li class="feature-item">
+                            <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M7 10L9 12L13 8" stroke="#25D366" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                             <span>Unlimited</span>- Whattsapp Webhook
                         </li>
                     </ul>
                     <button class="pricing-button">Get Started</button>
                 </div>
 
                 <div class="pricing-card popular">
-                    <div class="popular-badge">Most Popular</div>
+                    <div class="popular-badge">Best Seller</div>
                     <div class="pricing-header">
-                        <h3 class="pricing-plan">Professional</h3>
-                        <p class="pricing-description">For growing businesses</p>
+                        <h3 class="pricing-plan">PROFESSIONAL PLAN</h3>
+                            <p class="pricing-description">For growing businesses (12 Enhanced Featrues + 1 New ) </p>
                     </div>
                     <div class="pricing-price">
                         <span class="price-currency">₹</span>
-                        <span class="price-amount">79</span>
-                        <span class="price-period">/month</span>
+                        <span class="price-amount">16,000.00</span>
+                        <span class="price-period">/Yearly</span>
                     </div>
                     <ul class="pricing-features">
                         <li class="feature-item">
                             <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <path d="M7 10L9 12L13 8" stroke="#25D366" stroke-width="2" stroke-linecap="round"/>
                             </svg>
-                            Up to 5,000 contacts
+                            <span>50,000</span> - CONTACTS 
                         </li>
                         <li class="feature-item">
                             <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <path d="M7 10L9 12L13 8" stroke="#25D366" stroke-width="2" stroke-linecap="round"/>
                             </svg>
-                            10,000 messages/month
+                            <span>100</span> - Template Bots
                         </li>
                         <li class="feature-item">
                             <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <path d="M7 10L9 12L13 8" stroke="#25D366" stroke-width="2" stroke-linecap="round"/>
                             </svg>
-                            Advanced automation
+                            <span>100</span>- Message Bots
                         </li>
                         <li class="feature-item">
                             <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <path d="M7 10L9 12L13 8" stroke="#25D366" stroke-width="2" stroke-linecap="round"/>
                             </svg>
-                            CRM integration
+                             <span>1,000</span> - Campaigns
                         </li>
                         <li class="feature-item">
                             <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <path d="M7 10L9 12L13 8" stroke="#25D366" stroke-width="2" stroke-linecap="round"/>
                             </svg>
-                            Priority support
+                            <span>10</span>- AI Prompts
+                        </li>
+                        <li class="feature-item">
+                            <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M7 10L9 12L13 8" stroke="#25D366" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                            <span>100</span> - Canned Replies
+                        </li>
+                        <li class="feature-item">
+                            <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M7 10L9 12L13 8" stroke="#25D366" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                            <span>Unlimited</span>- Conversations
+                        </li>
+                        <li class="feature-item">
+                            <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M7 10L9 12L13 8" stroke="#25D366" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                            <span>5</span>- Bot Flow
+                        </li>
+                        <li class="feature-item">
+                            <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M7 10L9 12L13 8" stroke="#25D366" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                             <span>Unlimited</span>-  Rest API
+                        </li>
+                        <li class="feature-item">
+                            <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M7 10L9 12L13 8" stroke="#25D366" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                            <span>1</span>- Embedded Signup
+                        </li>
+                        <li class="feature-item">
+                            <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M7 10L9 12L13 8" stroke="#25D366" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                            <span>5</span>- Ecommerce Webhooks
+                        </li>
+                        <li class="feature-item">
+                            <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M7 10L9 12L13 8" stroke="#25D366" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                            <span>Unlimited</span>- Whattsapp Webhook
+                        </li>
+                        <li class="feature-item">
+                            <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M7 10L9 12L13 8" stroke="#25D366" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                            <span>1</span>- Staff
                         </li>
                     </ul>
                     <button class="pricing-button primary">Get Started</button>
@@ -640,44 +759,92 @@
 
                 <div class="pricing-card">
                     <div class="pricing-header">
-                        <h3 class="pricing-plan">Enterprise</h3>
-                        <p class="pricing-description">For large organizations</p>
+                        <h3 class="pricing-plan">ENTERPRISE PLAN</h3>
+                        <p class="pricing-description">For large organizations (All Enhanced And Advanced Features )</p>
                     </div>
                     <div class="pricing-price">
                         <span class="price-currency">₹</span>
-                        <span class="price-amount">199</span>
-                        <span class="price-period">/month</span>
+                        <span class="price-amount">27,999.00</span>
+                        <span class="price-period">/Yearly</span>
                     </div>
                     <ul class="pricing-features">
                         <li class="feature-item">
                             <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <path d="M7 10L9 12L13 8" stroke="#25D366" stroke-width="2" stroke-linecap="round"/>
                             </svg>
-                            Unlimited contacts
+                            <span>350,000</span> - CONTACTS 
                         </li>
                         <li class="feature-item">
                             <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <path d="M7 10L9 12L13 8" stroke="#25D366" stroke-width="2" stroke-linecap="round"/>
                             </svg>
-                            Unlimited messages
+                            <span>500</span> - Template Bots
                         </li>
                         <li class="feature-item">
                             <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <path d="M7 10L9 12L13 8" stroke="#25D366" stroke-width="2" stroke-linecap="round"/>
                             </svg>
-                            Custom workflows
+                            <span>500</span>- Message Bots
                         </li>
                         <li class="feature-item">
                             <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <path d="M7 10L9 12L13 8" stroke="#25D366" stroke-width="2" stroke-linecap="round"/>
                             </svg>
-                            Dedicated account manager
+                             <span>3,000</span> - Campaigns
                         </li>
                         <li class="feature-item">
                             <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <path d="M7 10L9 12L13 8" stroke="#25D366" stroke-width="2" stroke-linecap="round"/>
                             </svg>
-                            24/7 phone support
+                            <span>50</span>- AI Prompts
+                        </li>
+                        <li class="feature-item">
+                            <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M7 10L9 12L13 8" stroke="#25D366" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                            <span>250</span> - Canned Replies
+                        </li>
+                        <li class="feature-item">
+                            <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M7 10L9 12L13 8" stroke="#25D366" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                            <span>Unlimited</span>- Conversations
+                        </li>
+                        <li class="feature-item">
+                            <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M7 10L9 12L13 8" stroke="#25D366" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                            <span>25</span>- Bot Flow
+                        </li>
+                        <li class="feature-item">
+                            <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M7 10L9 12L13 8" stroke="#25D366" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                             <span>Unlimited</span>-  Rest API
+                        </li>
+                        <li class="feature-item">
+                            <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M7 10L9 12L13 8" stroke="#25D366" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                            <span>5</span>- Embedded Signup
+                        </li>
+                        <li class="feature-item">
+                            <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M7 10L9 12L13 8" stroke="#25D366" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                            <span>15</span>- Ecommerce Webhooks
+                        </li>
+                        <li class="feature-item">
+                            <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M7 10L9 12L13 8" stroke="#25D366" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                            <span>Unlimited</span>- Whattsapp Webhook
+                        </li>
+                        <li class="feature-item">
+                            <svg class="check-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M7 10L9 12L13 8" stroke="#25D366" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                            <span>2</span>- Staff
                         </li>
                     </ul>
                     <button class="pricing-button">Contact Sales</button>
@@ -690,7 +857,7 @@
         <div class="container">
             <div class="cta-content">
                 <h2 class="cta-title">Start Converting Your Leads Today</h2>
-                <p class="cta-subtitle">Join 500+ businesses already growing with WhatsApp automation. No credit card required.</p>
+                <p class="cta-subtitle">Join 1000+ businesses already growing with WhatsApp automation. No credit card required.</p>
                 <div class="cta-buttons">
                     <button class="btn-primary btn-large">Start Free Trial</button>
                     <button class="btn-outline-white btn-large">Schedule Demo</button>
@@ -700,7 +867,7 @@
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                             <path d="M7 10L9 12L13 8" stroke="#25D366" stroke-width="2" stroke-linecap="round"/>
                         </svg>
-                        <span>14-day free trial</span>
+                        <span>7-day free trial</span>
                     </div>
                     <div class="cta-feature">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -723,14 +890,27 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-column">
+                    
                     <div class="footer-logo">
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-                            <rect width="32" height="32" rx="8" fill="#25D366"/>
-                            <path d="M16 9C12.134 9 9 12.134 9 16C9 17.176 9.324 18.278 9.886 19.228L9.142 22.142L12.142 21.414C13.064 21.916 14.102 22.2 15.2 22.272C19.066 22.272 22.2 19.138 22.2 15.272C22.2 13.424 21.476 11.716 20.208 10.448C18.94 9.18 17.232 8.456 15.384 8.456L16 9ZM16.816 20.8C15.944 20.8 15.092 20.556 14.35 20.1L14.188 20.008L11.992 20.556L12.548 18.424L12.444 18.256C11.936 17.484 11.664 16.58 11.664 15.648C11.664 13.256 13.608 11.312 16 11.312C17.152 11.312 18.24 11.76 19.056 12.576C19.872 13.392 20.32 14.48 20.32 15.632C20.32 18.024 18.376 19.968 15.984 19.968L16.816 20.8Z" fill="white"/>
-                        </svg>
-                        <span>Quick Chat</span>
+                       <a href="index.html"><img src="content/QC-LOGO.png" alt="" width="150"></a> 
                     </div>
                     <p class="footer-description">Transform your WhatsApp into a powerful sales and conversion machine. Automate, engage, and grow.</p>
+                    <!--contact + mail -->
+                    <div class="footer-contact-info">
+                    <a href="mailto:hello@whatsconvert.com" class="contact-item">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M18.333 4.167H1.667A1.667 1.667 0 0 0 0 5.833v8.334a1.667 1.667 0 0 0 1.667 1.667h16.666A1.667 1.667 0 0 0 20 14.167V5.833a1.667 1.667 0 0 0-1.667-1.667Zm-1.666 1.666L10 10.417 3.333 5.833h13.334ZM1.667 14.167V7.5l8.333 5.833L18.333 7.5v6.667H1.667Z"/>
+                        </svg>
+                        <span>hello@QuickChats.com</span>
+                    </a>
+                    <a href="tel:+1234567890" class="contact-item">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M17.924 13.883l-3.393-1.453a.834.834 0 0 0-.967.243l-1.506 1.84a12.8 12.8 0 0 1-5.074-5.074l1.84-1.506a.833.833 0 0 0 .243-.967L7.616 3.573a.84.84 0 0 0-.977-.478l-3.333.833a.833.833 0 0 0-.64.81C2.666 12.857 8.64 18.831 16.746 18.831a.833.833 0 0 0 .81-.64l.833-3.333a.84.84 0 0 0-.478-.977h.013z"/>
+                        </svg>
+                        <span>+91 123 456 789</span>
+                    </a>
+                </div>
+                    <!--contact + mail -->
                     <div class="social-links">
                         <a href="#" class="social-link">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
@@ -770,7 +950,6 @@
                         <li><a href="#">About Us</a></li>
                         <li><a href="#">Careers</a></li>
                         <li><a href="#">Blog</a></li>
-                        <li><a href="#">Press Kit</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </div>
@@ -787,6 +966,7 @@
                 <div class="footer-column">
                     <h4 class="footer-title">Legal</h4>
                     <ul class="footer-links">
+                        
                         <li><a href="#">Privacy Policy</a></li>
                         <li><a href="#">Terms of Service</a></li>
                         <li><a href="#">Cookie Policy</a></li>
@@ -795,7 +975,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 QuickChat. All rights reserved.</p>
+                <p>&copy; 2026 QuickChats. All rights reserved.</p>
             </div>
         </div>
     </footer>

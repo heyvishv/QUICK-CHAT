@@ -1,17 +1,45 @@
 /* ===== CSS VARIABLES — Blue Theme ===== */
 :root {
-    --brand:        #3B5BFF;
-    --brand-light:  #5B78FF;
+    --brand:        hsl(232, 100%, 50%) ;
+    --brand-light:  hsl(229, 100%, 63%);
     --brand-dark:   #2A44DD;
     --brand-glow:   rgba(59, 91, 255, 0.35);
     --brand-soft:   rgba(59, 91, 255, 0.12);
     --brand-border: rgba(59, 91, 255, 0.25);
-    --bg:           #080E24;
+    --bg:           #000000;
     --bg-card:      rgba(14, 22, 50, 0.75);
     --bg-mid:       rgba(14, 22, 50, 0.45);
     --text:         #E5E7EB;
     --text-muted:   #9CA3AF;
     --text-dim:     #6B7280;
+}
+
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+@keyframes slideUp {
+    0% { opacity: 0; transform: translateY(50px) scale(0.95); }
+    100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes slideInLeft {
+    0% { opacity: 0; transform: translateX(-60px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+    0% { opacity: 0; transform: translateX(60px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes revealLine {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+
+@keyframes meshGlow {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(1.2); }
 }
 
 /* Reset and Base Styles */
@@ -90,6 +118,101 @@ body {
 .btn-outline-white:hover { background: rgba(255,255,255,0.1); border-color: white; transform: translateY(-2px); }
 
 /* ===== HERO ===== */
+
+
+/* ===== HERO SECTION ENHANCEMENTS ===== */
+.hero-content {
+    animation: slideUp 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+.hero-title .gradient-text {
+    display: inline-block;
+    animation: slideUp 1.2s cubic-bezier(0.19, 1, 0.22, 1) 0.2s both;
+}
+
+.chat-mockup {
+    animation: slideInRight 1.2s cubic-bezier(0.19, 1, 0.22, 1) 0.4s both;
+    position: relative;
+}
+
+/* Glowing Aura behind Chat Mockup */
+.chat-mockup::after {
+    content: '';
+    position: absolute;
+    inset: -20px;
+    background: var(--brand-glow);
+    filter: blur(40px);
+    z-index: -1;
+    border-radius: 30px;
+    animation: meshGlow 4s infinite ease-in-out;
+}
+
+/* ===== PROBLEM & SOLUTION GRID (STAGGERED) ===== */
+.problem-solution .card.red {
+    opacity: 0;
+    animation: slideInLeft 0.8s ease forwards;
+}
+
+.problem-solution .card.green {
+    opacity: 0;
+    animation: slideInRight 0.8s ease forwards;
+}
+
+/* Staggered Delay for the Cards */
+.grid .card:nth-child(1) { animation-delay: 0.2s; }
+.grid .card:nth-child(2) { animation-delay: 0.4s; }
+.grid .card:nth-child(3) { animation-delay: 0.6s; }
+.grid .card:nth-child(4) { animation-delay: 0.8s; }
+
+/* ===== FEATURES GRID (3D POP EFFECT) ===== */
+.feature-card {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUp 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+/* Creates a waterfall effect as you scroll down */
+.features-grid .feature-card:nth-child(1) { animation-delay: 0.1s; }
+.features-grid .feature-card:nth-child(2) { animation-delay: 0.2s; }
+.features-grid .feature-card:nth-child(3) { animation-delay: 0.3s; }
+.features-grid .feature-card:nth-child(4) { animation-delay: 0.4s; }
+.features-grid .feature-card:nth-child(5) { animation-delay: 0.5s; }
+.features-grid .feature-card:nth-child(6) { animation-delay: 0.6s; }
+
+/* ===== DASHBOARD DATA ANIMATION ===== */
+.qc-bar {
+    transform-origin: bottom;
+    animation: growBar 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+@keyframes growBar {
+    0% { transform: scaleY(0); }
+    100% { transform: scaleY(1); }
+}
+
+/* ===== PRICING HIGHLIGHT ===== */
+.pricing-card.popular {
+    animation: pulseBorder 2s infinite;
+}
+
+@keyframes pulseBorder {
+    0% { border-color: var(--brand-border); }
+    50% { border-color: var(--brand); box-shadow: 0 0 20px var(--brand-glow); }
+    100% { border-color: var(--brand-border); }
+}
+
+/* ===== GLOBAL HOVER REFINEMENT ===== */
+.feature-card, .benefit-card, .pricing-card, .stat-box {
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+}
+
+.feature-card:hover {
+    background: rgba(59, 91, 255, 0.08) !important;
+    border-color: var(--brand-light) !important;
+    transform: translateY(-10px) scale(1.02) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4) !important;
+}
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 .hero { padding: 100px 0; position: relative; overflow: hidden; }
 .hero::before {
     content: ''; position: absolute; top: -50%; right: -20%;
@@ -479,6 +602,7 @@ body {
     background: var(--bg-card); border: 1px solid var(--brand-border);
     border-radius: 24px; padding: 40px; transition: all 0.3s ease; position: relative;
 }
+
 .pricing-card:hover {
     transform: translateY(-8px); border-color: rgba(59,91,255,0.45);
     box-shadow: 0 20px 40px rgba(59,91,255,0.15);
@@ -497,7 +621,7 @@ body {
 .pricing-description { color: var(--text-muted); }
 .pricing-price { display: flex; align-items: baseline; margin-bottom: 32px; }
 .price-currency { font-size: 24px; color: var(--text-dim); font-weight: 600; }
-.price-amount { font-size: 56px; font-weight: 800; color: var(--brand-light); margin: 0 4px; }
+.price-amount { font-size: 40px; font-weight: 800; color: var(--brand-light); margin: 0 4px; }
 .price-period { font-size: 18px; color: var(--text-dim); }
 .pricing-features { list-style: none; margin-bottom: 32px; }
 .feature-item { display: flex; align-items: center; gap: 12px; padding: 12px 0; color: var(--text); }
@@ -621,6 +745,71 @@ body {
     border-top: 1px solid var(--brand-border); color: var(--text-dim);
 }
 
+
+
+/* ===== FLOATING BUTTON ===== */
+.floating-btn {
+  position: fixed;
+  bottom: 20px;
+
+  /* Align with your container */
+  right: calc((100vw - 1200px) / 2 + 24px);
+
+  width: 100px;
+  height: 100px;
+  z-index: 999999;
+  cursor: pointer;
+}
+
+/* FLOATING ANIMATION */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
+}
+
+.floating-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 30px;
+
+  animation: float 3s ease-in-out infinite;
+  transition: transform 0.3s ease;
+  padding: 8px;
+}
+
+/* HOVER EFFECT */
+.floating-btn:hover img {
+  transform: translateY(-15px) scale(1.1);
+}
+
+@media (max-width: 1200px) {
+  .floating-btn {
+    right: 20px; /* fallback for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .floating-btn {
+    width: 50px;
+    height: 50px;
+    bottom: 15px;
+    right: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .floating-btn {
+    width: 45px;
+    height: 45px;
+    bottom: 12px;
+    right: 12px;
+  }
+}
+
+
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
     .hero-grid { grid-template-columns: 1fr; gap: 48px; }
@@ -651,4 +840,205 @@ body {
     .hero-title { font-size: 28px; }
     .section-title { font-size: 28px; }
     .cta-title { font-size: 32px; }
+}
+
+
+/*=============================================================*/
+
+/* ===== POPUP WITH 4s DELAY ===== */
+
+#popup input {
+    display: none;
+}
+
+/* Overlay: Now waits 3.5s before appearing */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    /* Keeps your requested blur */
+    backdrop-filter: blur(8px); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+
+    /* Logic for the delay */
+    opacity: 0;
+    visibility: hidden;
+    /* waits 3.5s, then takes 0.6s to fade in */
+    animation: popupFadeIn 0.6s ease-out 3.5s forwards;
+}
+
+/* Popup Card: Pops in slightly after the overlay */
+.popup-card {
+    background: #0f172a;
+    padding: 30px;
+    width: 320px;
+    border-radius: 16px;
+    text-align: center;
+    color: white;
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+    position: relative;
+
+    /* Elastic pop-in animation */
+    opacity: 0;
+    transform: scale(0.7);
+    animation: popupScaleIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 3.7s forwards;
+}
+
+/* Close button */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #aaa;
+    transition: color 0.3s;
+}
+
+.close-btn:hover {
+    color: white;
+}
+
+/* Button with a gentle attention-seeker pulse */
+.popup-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    background: linear-gradient(135deg, #3b5bff, #2a44dd);
+    transition: transform 0.3s ease;
+    animation: btnAttention 2s infinite 5s; /* Starts moving after popup is open */
+}
+
+.popup-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Hide popup when clicked */
+#close-popup:checked ~ .popup-overlay {
+    display: none !important;
+}
+
+/* --- Keyframes --- */
+
+@keyframes popupFadeIn {
+    to { 
+        opacity: 1; 
+        visibility: visible; 
+    }
+}
+
+@keyframes popupScaleIn {
+    to { 
+        opacity: 1; 
+        transform: scale(1); 
+    }
+}
+
+/* Subtle wiggle to make the user click "GET OFFER" */
+@keyframes btnAttention {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+}
+
+
+
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/* ===== GLOBAL ANIMATION KEYFRAMES ===== */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInRight {
+    from { opacity: 0; transform: translateX(30px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInLeft {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+
+
+
+/* =============================================================
+   NEW ANIMATIONS SECTION 
+   ============================================================= */
+
+/* 1. Define the Keyframes (The actual movement) */
+@keyframes fadeInUp {
+    from { 
+        opacity: 0; 
+        transform: translateY(30px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+@keyframes fadeInRight {
+    from { 
+        opacity: 0; 
+        transform: translateX(30px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateX(0); 
+    }
+}
+
+/* 2. Apply the Entrance Animations to Hero Section */
+.hero-content > * {
+    opacity: 0; 
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Staggered Delays for a Professional Flow */
+.hero-content .badge:nth-child(1) { animation-delay: 0.1s; }
+.hero-content .badge:nth-child(2) { animation-delay: 0.2s; }
+.hero-title { animation-delay: 0.3s; }
+.hero-subtitle { animation-delay: 0.4s; }
+.hero-buttons { animation-delay: 0.5s; }
+.hero-stats { animation-delay: 0.6s; }
+
+/* Slide in the Chat Mockup from the Right */
+.chat-mockup {
+    opacity: 0;
+    animation: fadeInRight 1s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards;
+}
+
+/* 3. Smooth Hover Transitions for ALL Cards */
+.card, .feature-card, .benefit-card, .pricing-card, .testimonial-card {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+}
+
+/* Enhanced Glow on Hover */
+.feature-card:hover, .benefit-card:hover {
+    transform: translateY(-12px) scale(1.03) !important;
+    box-shadow: 0 20px 40px var(--brand-glow) !important;
+    border-color: var(--brand-light) !important;
+}
+
+/* 4. Pulse Effect for the "Start Free Trial" Button */
+.hero-buttons .btn-primary {
+    animation: buttonPulse 2s infinite;
+}
+
+@keyframes buttonPulse {
+    0% { box-shadow: 0 0 0 0 rgba(59, 91, 255, 0.4); }
+    70% { box-shadow: 0 0 0 15px rgba(59, 91, 255, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(59, 91, 255, 0); }
 }

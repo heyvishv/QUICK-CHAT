@@ -753,7 +753,7 @@ body {
   bottom: 20px;
 
   /* Align with your container */
-  right: calc((100vw - 1200px) / 2 + 24px);
+  right: calc((100vw - 1600px) / 2 + 24px);
 
   width: 100px;
   height: 100px;

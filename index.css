@@ -1042,3 +1042,114 @@ body {
     70% { box-shadow: 0 0 0 15px rgba(59, 91, 255, 0); }
     100% { box-shadow: 0 0 0 0 rgba(59, 91, 255, 0); }
 }
+
+
+
+
+
+@media (max-width: 768px) {
+  .contact-item {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .contact-item span {
+    text-align: left;
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    /* 1. Prevent any side-scrolling (The "Gap" Fix) */
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+        position: relative;
+    }
+
+    .nav-content {
+        padding: 0 12px; /* Controlled side spacing */
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* 2. Shrink Logo to make room for the right-side elements */
+    .logo img {
+        width: 110px; /* Reduced to prevent pushing the right side out */
+        height: auto;
+    }
+
+    /* 3. The 4 Links Dropdown */
+    .nav-links {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #0d1630;
+        padding: 30px;
+        gap: 20px;
+        text-align: center;
+        border-bottom: 2px solid var(--brand-border);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        z-index: 1000;
+        transform: none; 
+    }
+
+    /* 4. Keep Buttons and Hamburger on the far right */
+    .nav-right {
+        gap: 10px; /* Space between buttons and hamburger */
+        flex-shrink: 0; /* Prevents this section from collapsing */
+    }
+
+    .nav-buttons {
+        gap: 6px;
+    }
+
+    .nav-buttons a {
+        padding: 6px 10px; /* Smaller buttons for mobile */
+        font-size: 11px;
+        white-space: nowrap;
+    }
+
+    /* 5. Hamburger Icon - Stays exactly where it is */
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        flex-shrink: 0;
+    }
+
+    .menu-toggle .bar {
+        width: 22px;
+        height: 2px;
+        background: white;
+    }
+
+    /* Logic to show links */
+    #menu-toggle-check:checked ~ .nav-links {
+        display: flex;
+    }
+
+    /* 6. Fix for your specific X Animation Selector */
+    #menu-toggle-check:checked ~ .nav-right .menu-toggle .bar:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+    #menu-toggle-check:checked ~ .nav-right .menu-toggle .bar:nth-child(2) {
+        opacity: 0;
+    }
+    #menu-toggle-check:checked ~ .nav-right .menu-toggle .bar:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+}
